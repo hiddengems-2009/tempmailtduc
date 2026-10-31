@@ -5,40 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp Mail Pro - nguyenthanhduc.xyz</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Thêm Font Awesome để có icon đẹp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Temp Mail Pro</h1>
-        <p>Bảo vệ địa chỉ email cá nhân của bạn khỏi thư rác, bot, lừa đảo và lạm dụng trực tuyến khác.</p>
+        <h1><i class="fa-solid fa-envelope-open-text"></i> Temp Mail Pro</h1>
+        <p>Bảo vệ địa chỉ email cá nhân của bạn khỏi thư rác, bot, lừa đảo. Tạo email tạm thời miễn phí, nhận thư ngay lập tức.</p>
     </header>
 
     <main>
         <section class="features">
-            <div class="feature"><h3>🔒 Bảo mật</h3><p>Hệ thống mã hóa hiện đại</p></div>
-            <div class="feature"><h3>⚡ Nhanh chóng</h3><p>Không cần đăng ký phức tạp</p></div>
-            <div class="feature"><h3>🛡️ An toàn</h3><p>Trải nghiệm an toàn nhất</p></div>
+            <div class="feature"><i class="fa-solid fa-shield-halved"></i><h3>Bảo mật</h3><p>Hệ thống mã hóa hiện đại</p></div>
+            <div class="feature"><i class="fa-solid fa-bolt"></i><h3>Nhanh chóng</h3><p>Không cần đăng ký phức tạp</p></div>
+            <div class="feature"><i class="fa-solid fa-clock-rotate-left"></i><h3>Tự động</h3><p>Hộp thư tự động làm mới</p></div>
         </section>
 
         <section class="inbox">
-            <h2>Hộp thư đến</h2>
+            <div class="inbox-header">
+                <h2><i class="fa-solid fa-inbox"></i> Hộp thư đến</h2>
+                <button id="newMailBtn" class="btn-primary"><i class="fa-solid fa-rotate-right"></i> Tạo Email Mới</button>
+            </div>
+            
             <div class="email-box">
-                <label>Email của bạn:</label>
+                <label>Địa chỉ Email của bạn:</label>
                 <div class="email-row">
-                    <input type="text" id="email" readonly>
-                    <button id="copyBtn" title="Sao chép">📋</button>
-                    <button id="refreshBtn" title="Làm mới">🔄</button>
+                    <input type="text" id="email" readonly placeholder="Đang tạo email...">
+                    <button id="copyBtn" title="Sao chép"><i class="fa-solid fa-copy"></i></button>
+                </div>
+                <div class="domain-selector">
+                    <label>Hoặc tự chọn tên (Domain):</label>
+                    <select id="domainSelect">
+                        <option value="">Đang tải domain...</option>
+                    </select>
                 </div>
             </div>
-            <p class="note">💡 Hướng dẫn: Nhấn "Làm mới" để tải lại. Email sẽ tự động nhận khi có người gửi đến.</p>
+            
+            <div class="status-bar">
+                <span id="statusText"><i class="fa-solid fa-spinner fa-spin"></i> Đang kết nối...</span>
+            </div>
 
             <div id="messages">
-                <p class="loading">Đang tải...</p>
+                <!-- Tin nhắn sẽ hiện ở đây -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 nguyenthanhduc.xyz</p>
+        <p>&copy; 2025 nguyenthanhduc.xyz - Dịch vụ Email Tạm Thời</p>
     </footer>
 
     <script src="script.js"></script>
