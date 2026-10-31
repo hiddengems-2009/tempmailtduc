@@ -66,8 +66,14 @@ async function loadMessages() {
     const list = await res.json();
 
     if (list.length === 0) {
-      messagesDiv.innerHTML = '<p class="empty-msg">Hộp thư đang trống. Hãy gửi thử một email đến địa chỉ trên!</p>';
-      return;
+  messagesDiv.innerHTML = `
+    <div style="text-align: center; padding: 30px; color: #64748b; border: 2px dashed #cbd5e1; border-radius: 10px; margin-top: 20px;">
+      <i class="fa-solid fa-envelope-open" style="font-size: 2rem; margin-bottom: 10px; color: #94a3b8;"></i>
+      <p>Chưa có thư nào.</p>
+      <p style="font-size: 0.85rem;">Hãy dùng một email khác gửi thử đến địa chỉ trên để kiểm tra!</p>
+    </div>
+  `;
+  return;
     }
 
     messagesDiv.innerHTML = '';
