@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Mail Pro - nguyenthanhduc.xyz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Temp Mail Pro</h1>
+        <p>Bảo vệ địa chỉ email cá nhân của bạn khỏi thư rác, bot, lừa đảo và lạm dụng trực tuyến khác.</p>
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="feature"><h3>🔒 Bảo mật</h3><p>Hệ thống mã hóa hiện đại</p></div>
+            <div class="feature"><h3>⚡ Nhanh chóng</h3><p>Không cần đăng ký phức tạp</p></div>
+            <div class="feature"><h3>🛡️ An toàn</h3><p>Trải nghiệm an toàn nhất</p></div>
+        </section>
+
+        <section class="inbox">
+            <h2>Hộp thư đến</h2>
+            <div class="email-box">
+                <label>Email của bạn:</label>
+                <div class="email-row">
+                    <input type="text" id="email" readonly>
+                    <button id="copyBtn" title="Sao chép">📋</button>
+                    <button id="refreshBtn" title="Làm mới">🔄</button>
+                </div>
+            </div>
+            <p class="note">💡 Hướng dẫn: Nhấn "Làm mới" để tải lại. Email sẽ tự động nhận khi có người gửi đến.</p>
+
+            <div id="messages">
+                <p class="loading">Đang tải...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 nguyenthanhduc.xyz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
